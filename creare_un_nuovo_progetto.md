@@ -15,3 +15,7 @@ $ APACHEUSER=`ps aux | grep -E '[a]pache|[h]ttpd' | grep -v root | head -1 | cut
 $ sudo setfacl -R -m u:$APACHEUSER:rwX -m u:`whoami`:rwX app/cache app/logs
 $ sudo setfacl -dR -m u:$APACHEUSER:rwX -m u:`whoami`:rwX app/cache app/logs
 ```
+Successivamente, quando si vorrà aggiornare il progetto basterà lanciare il seguente comando:
+```
+$ composer update
+```
