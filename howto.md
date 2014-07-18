@@ -44,3 +44,6 @@ $user = $this->getUser();
 ```php
 $this->get('security.context')->isGranted('ROLE_ADMIN')
 ```
+
+###PASSARE PARAMETRI AD UN FORM TYPE
+editEscursioneAction; EscursioneType
