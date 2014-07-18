@@ -20,8 +20,16 @@ WHERE u.id NOT IN (SELECT IDENTITY(p.unita) FROM Web6CondominiBundle:Proprieta p
 ### SET/GET GLOBAL VARS IN TWIG TEMPLATE
 Dichiarare la variabile nel file `app/config/config.yml`
 ```
-	twig:
-	  globals:
-	    var: "Ciao"
+twig:
+  globals:
+    var: "Ciao"
 ```
-Per recuperare il valore della vsriabile nel template twig è sufficiente scrivere `{{var}}`
+Per recuperare il valore della variabile nel template twig è sufficiente scrivere `{{var}}`
+
+###SET/GET PARAMETERS IN CONTROLLER
+Dichiarare la variavile nel file `app/config/parameters.yml`
+```
+parameters:
+  var: "Ciao"
+```
+Per recuperare il valore della variabile nel controller è sufficiente scrivere `$this->container->getParameter('var')`
