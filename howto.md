@@ -16,3 +16,12 @@ LEFT JOIN u.condominio c
 LEFT JOIN u.tipo t
 WHERE u.id NOT IN (SELECT IDENTITY(p.unita) FROM Web6CondominiBundle:Proprieta p)
 ```
+
+### SET/GET GLOBAL VARS IN TWIG TEMPLATE
+Dichiarare la variabile nel file `app/config/config.yml`
+```
+	twig:
+	  globals:
+	    var: "Ciao"
+```
+Per recuperare il valore della vsriabile nel template twig è sufficiente scrivere `{{var}}`
