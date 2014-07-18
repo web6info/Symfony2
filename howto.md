@@ -33,3 +33,14 @@ parameters:
   var: "Ciao"
 ```
 Per recuperare il valore della variabile nel controller è sufficiente scrivere `$this->container->getParameter('var')`
+
+###GET USER IN CONTROLLER
+```php
+$user = $this->get('security.context')->getToken()->getUser();
+$user = $this->getUser();
+```
+
+###CHECK ROLE (libro -> sicurezza)
+```php
+$this->get('security.context')->isGranted('ROLE_ADMIN')
+```
