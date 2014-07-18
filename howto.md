@@ -40,7 +40,7 @@ $user = $this->get('security.context')->getToken()->getUser();
 $user = $this->getUser();
 ```
 
-###CHECK ROLE (libro -> sicurezza)
+###CHECK ROLE
 ```php
 $this->get('security.context')->isGranted('ROLE_ADMIN')
 ```
