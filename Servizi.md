@@ -6,6 +6,7 @@ Servizi
 - [Referenziare (iniettare) servizi](http://symfony.com/it/doc/current/book/service_container.html#referenziare-iniettare-servizi)
 - [How can I access a service outside of a controller with Symfony2?](http://stackoverflow.com/questions/6124444/how-can-i-access-a-service-outside-of-a-controller-with-symfony2)
 - [Symfony2-How to use access a service from outside of a controller](http://stackoverflow.com/questions/8757916/symfony2-how-to-use-access-a-service-from-outside-of-a-controller)
+
 Definire il servizio nel file `src/Web6/XxxBundle/Resurces/config/services.yml` come segue:
 ```yaml
 xxx.functions:
