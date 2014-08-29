@@ -10,3 +10,22 @@ xxx.functions:
     session: @session
     securityContext: @security.context
 ```
+Nella classe `src/Web6/xxxBundle/Helper/Functions.php` va inserito il seguente codice:
+```php
+protected $mySession;
+protected $mySecurityContext;
+
+public function __construct($session, $securityContext){
+  $this->mySession = $session;
+  $this->mySecurityContext = $securityContext;
+}
+```
+Adesso è possibile richiamare il servizio richiesto all'interno dei metodi, ad esempio:
+```php
+...
+public function getAdmin(){
+    if($this->mySecurityContext->isGranted('ROLE_SUPER_ADMIN')) return null;
+    else return $this->mySecurityContext->getToken()->getUser();
+}
+...
+```
